@@ -4,19 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
     tools:context=".Screen1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
 
-    <Button
-        android:id="@+id/HUL_id"
+        android:gravity="center"
+        android:padding="20dp">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:src="@drawable/hul_logo"
+            android:padding="20dp"/>
+        <Button
+            android:id="@+id/HUL_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HUL"
+            android:padding="20dp"/>
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HUL"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:padding="20dp">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:src="@drawable/user_logo"
         android:padding="20dp"/>
 
     <Button
         android:id="@+id/Wholesale_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wholesaler" />
+        android:text="Wholesaler"
+        android:padding="20dp"/></LinearLayout>
 
 </LinearLayout>

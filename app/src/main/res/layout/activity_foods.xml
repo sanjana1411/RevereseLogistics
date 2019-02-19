@@ -5,98 +5,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.example.revereselogistics.HomeCare_prod">
+    android:orientation="vertical"
+    tools:context="com.example.revereselogistics.Foods">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="30dp"
-            android:text="@string/home_care"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textColor="@color/light_button"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="30dp"
+        android:text="@string/food"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/light_button"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+        <ImageView
+            android:id = "@+id/cif"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:src="@drawable/cornetto"
             />
+        <ImageView
+            android:id="@+id/comfort"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:src="@drawable/knorr"
+            />
+        <ImageView
+            android:id="@+id/wheel"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/lipton"
+            />
+    </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="30dp"
+            android:paddingBottom="20dp"
             android:paddingTop="20dp">
             <ImageView
                 android:id = "@+id/cif"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
-                android:src="@drawable/cif"
+                android:src="@drawable/magnum"
                 />
             <ImageView
                 android:id="@+id/comfort"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
-
-                android:src="@drawable/comfort_logo"
+                android:src="@drawable/bru"
                 />
             <ImageView
                 android:id="@+id/wheel"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/wheel_logo"
+                android:src="@drawable/annapurna"
                 />
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="30dp"
+            android:paddingBottom="20dp"
             android:paddingTop="20dp">
             <ImageView
-                android:id="@+id/domex"
+                android:id = "@+id/cif"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/dome_logo"
+                android:layout_height="100dp"
+                android:src="@drawable/roses"
                 />
             <ImageView
-                android:id="@+id/rin"
+                android:id="@+id/comfort"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/rin_logo"
+                android:layout_height="100dp"
+                android:src="@drawable/redlabelbb"
                 />
             <ImageView
-                android:id="@+id/rin"
+                android:id="@+id/wheel"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/surf"
+                android:src="@drawable/taaza"
                 />
-              </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="30dp">
-
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
             <ImageView
+                android:id = "@+id/cif"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:src="@drawable/tajmahal"
+                />
+            <ImageView
+                android:id="@+id/comfort"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:src="@drawable/kissan"
+                />
+            <ImageView
+                android:id="@+id/wheel"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/sunlight_logo" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/vim" />
-
-
-
-
+                android:src="@drawable/kwality_wall"
+                />
         </LinearLayout>
-
         <Button
             android:id="@+id/confirm_homecare"
             android:layout_width="wrap_content"
@@ -108,8 +141,5 @@
             android:textFontWeight="20sp"
             android:padding="20dp"/>
 
-
     </LinearLayout>
-
-
 </ScrollView>

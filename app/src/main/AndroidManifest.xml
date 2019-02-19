@@ -26,7 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeCare_prod" />
-        <activity android:name=".Water_purifier"></activity>
+        <activity android:name=".Water_purifier" />
+        <activity android:name=".Foods"></activity>
     </application>
 
 </manifest>

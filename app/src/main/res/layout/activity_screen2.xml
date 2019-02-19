@@ -6,27 +6,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/back"
     tools:context=".Screen2">
     <EditText
         android:id="@+id/uid"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:inputType="text"
-        android:hint = "UserName"
+        android:hint = "Enter your Username here"
         android:padding="20dp"
-        android:shadowRadius="5dp" />
+        android:textStyle="bold" />
     <EditText
         android:id="@+id/password"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:inputType="textPassword"
-        android:hint="Password"
+        android:hint="Enter Password"
         android:padding="20dp"
-        android:shadowRadius="5dp"/>
+        android:textStyle="bold"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HUL_Login"
         android:padding="30dp"
-        android:id="@+id/HUL_login"/>
+        android:id="@+id/HUL_login"
+        android:textStyle="bold"/>
 </LinearLayout>

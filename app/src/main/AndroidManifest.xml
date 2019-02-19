@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Signup"></activity>
         <activity android:name=".Screen10" />
         <activity android:name=".Screen9" />
         <activity android:name=".Screen8" />
@@ -26,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeCare_prod" />
-        <activity android:name=".Water_purifier"></activity>
+        <activity android:name=".Water_purifier" />
     </application>
 
 </manifest>

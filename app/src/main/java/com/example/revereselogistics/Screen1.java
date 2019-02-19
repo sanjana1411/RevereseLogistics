@@ -12,7 +12,7 @@ public class Screen1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_screen1);
 
         Button HUL = (Button) findViewById(R.id.HUL_id);
         Button Wholesale = (Button) findViewById(R.id.Wholesale_id);

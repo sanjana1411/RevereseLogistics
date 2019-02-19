@@ -13,14 +13,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/GView"/>
 
-    <android.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
 
         <TextView
             android:id="@+id/text_view_id"
@@ -29,5 +22,5 @@
             android:text="HOME" />
 
 
-    </android.widget.Toolbar>
+
 </RelativeLayout>

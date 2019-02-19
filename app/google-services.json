@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "892883604225",
+    "firebase_url": "https://reverselogistics-5ddf8.firebaseio.com",
+    "project_id": "reverselogistics-5ddf8",
+    "storage_bucket": "reverselogistics-5ddf8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892883604225:android:464dfc8cda78d729",
+        "android_client_info": {
+          "package_name": "com.example.revereselogistics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892883604225-eg72dgd9flj2asrlrqn06sbbvdk1gs72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.revereselogistics",
+            "certificate_hash": "00164910aad0d7d4841db9c47df599f62e821b99"
+          }
+        },
+        {
+          "client_id": "892883604225-5os7k71go8sdf4qpquprocb3ldjbf744.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwBQhM9HBKRM2OTVzYmEzTY9k9yJxDVXU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892883604225-5os7k71go8sdf4qpquprocb3ldjbf744.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

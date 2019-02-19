@@ -14,12 +14,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Retailer"
-        android:id="@+id/add"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Track Order"
         android:id="@+id/order"
         />

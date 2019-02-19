@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Reverese Logistics</string>
+    <string name="home_care">HOME CARE PRODUCTS</string>
+    <string name="water">WATER PURIFIER</string>
 </resources>

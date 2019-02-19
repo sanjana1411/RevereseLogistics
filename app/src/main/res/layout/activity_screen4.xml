@@ -10,6 +10,11 @@ tools:context=".Screen7">
     android:layout_height="wrap_content"
     android:text="Home Settings Page"
     android:id="@+id/settings"/>
+    <Spinner
+        android:id="@+id/prod_cate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"/>
 
 
 </RelativeLayout>

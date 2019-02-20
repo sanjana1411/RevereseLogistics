@@ -3,10 +3,14 @@ package com.example.revereselogistics;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import java.util.Objects;
 
 public class Screen3 extends AppCompatActivity {
 
@@ -27,6 +31,8 @@ public class Screen3 extends AppCompatActivity {
             }
         });
 
+     //   Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
+
 //    public void initToolBar() {
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
 //        // toolbar.setTitle(HOME);
@@ -44,5 +50,23 @@ public class Screen3 extends AppCompatActivity {
 //        );
 //    }
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_screen3, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_settings:
+                Intent settingsIntent = new Intent(this, Screen4.class);
+                startActivity(settingsIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

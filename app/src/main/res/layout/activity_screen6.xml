@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_new"
+    android:background="@drawable/tempback"
     android:orientation="vertical"
     tools:context=".Screen6">
     <Button
@@ -12,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/colorAccent"
-        android:background=""
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="20dp"
         android:text="Account info "

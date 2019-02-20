@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/tempback"
+    tools:context=".Screen2"
     >
 
     <EditText

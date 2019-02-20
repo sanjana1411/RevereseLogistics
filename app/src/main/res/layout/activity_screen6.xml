@@ -23,6 +23,12 @@
         android:textSize="20sp"
         android:text="Account info "
         tools:ignore="DuplicateIds,InvalidId" />
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="85dp"
+            android:src="@drawable/user_logo"
+            android:padding="10dp"/>
 
 
     <TextView
@@ -48,7 +54,7 @@
         android:padding="12dp"
         android:textSize="18dp"
         android:textColor="@color/colorAccent"
-        android:text="email_id" />
+        android:text="Email Address" />
     <TextView
         android:id="@+id/add1"
         android:layout_width="wrap_content"
@@ -84,9 +90,10 @@
 
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="55dp"
-            app:srcCompat="@drawable/blue_circle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/logo"
+            android:padding="5dp"
             />
         <TextView
             android:id="@+id/return_1"
@@ -130,9 +137,10 @@
             >
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="55dp"
-                app:srcCompat="@drawable/blue_circle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/logo"
+                android:padding="5dp"
                 />
             <TextView
                 android:id="@+id/return_2"
@@ -176,9 +184,10 @@
             >
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="55dp"
-                app:srcCompat="@drawable/blue_circle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/logo"
+                android:padding="5dp"
                 />
             <TextView
                 android:id="@+id/return_3"
@@ -220,11 +229,9 @@
         android:id="@+id/request_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_gravity="center"
         android:background="@color/blue"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="12dp"
         android:textColor="@color/white"
         android:textSize="15dp"
         android:text="Request a return " />

@@ -17,7 +17,7 @@
             android:text="@string/home_care"
             android:textStyle="bold"
             android:textSize="24sp"
-            android:textColor="@color/light_button"
+            android:textColor="@color/colorAccent"
             />
         <LinearLayout
             android:layout_width="wrap_content"

@@ -1,32 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_new"
+    android:orientation="vertical"
     tools:context=".Screen6">
     <Button
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:background=""
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Account info "
+        tools:ignore="DuplicateIds,InvalidId" />
+
+
+    <TextView
+        android:id="@+id/wh_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Request a return "
-        android:id="@+id/Return"/>
-    <android.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        android:text="Wholesaler Name" />
+    <TextView
+        android:id="@+id/wh_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        android:text="Contact Number" />
+    <TextView
+        android:id="@+id/wh_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        android:text="email_id" />
+    <TextView
+        android:id="@+id/add1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        android:text="Address Line1" />
+    <TextView
+        android:id="@+id/add2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        android:text="Address Line2" />
+    <TextView
+        android:id="@+id/add3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        android:text="Address Line3" />
+    <Button
+        android:id="@+id/track_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:text="Track recent returns" />
 
-        <TextView
-            android:id="@+id/wh_settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HOME" />
+    <Button
+        android:id="@+id/request_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/blue"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:text="Request a return " />
 
 
-    </android.widget.Toolbar>
 
-
-</RelativeLayout>
+</LinearLayout>

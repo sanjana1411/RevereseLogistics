@@ -29,8 +29,8 @@ public class Screen1 extends AppCompatActivity {
         Wholesale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen2 = new Intent(Screen1.this, Screen5.class);
-                startActivity(screen2);
+                Intent screen5 = new Intent(Screen1.this, Screen5.class);
+                startActivity(screen5);
 
             }
         });

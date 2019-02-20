@@ -13,21 +13,13 @@ public class Screen2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen2);
         Button HUL_login = (Button) findViewById(R.id.HUL_login);
-//        HUL_login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent screen3 = new Intent(Screen2.this, Screen3.class);
-//                startActivity(screen3);
-//
-//            }
-//        });
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_screen2);
         HUL_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen3;
-                screen3= new Intent(Screen2.this, Screen3.class);
+
+
+
+                Intent screen3 = new Intent(Screen2.this, Screen3.class);
                 startActivity(screen3);
             }
         });

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+
+android:background="@drawable/back"
+tools:context=".Signup">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="Enter your details:"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"/>
+    <EditText
+    android:id="@+id/name"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+    android:inputType="text"
+    android:textColorHint="@color/blue"
+    android:hint = "NAME"
+    android:gravity="center"
+    android:padding="20dp" />
+    <EditText
+        android:id="@+id/contact"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint = "CONTACT "
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColorHint="@color/blue" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint = "EMAIL ADDRESS"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColorHint="@color/blue" />
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint = "PASSWORD"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColorHint="@color/blue" />
+    <EditText
+        android:id="@+id/retail"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint = "RETAILERS"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColorHint="@color/blue" />
+    <EditText
+        android:id="@+id/region"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint = "REGION"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColorHint="@color/blue"/>
+    <CheckBox
+        android:id="@+id/food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FOOD AND DRINK"
+        android:layout_marginHorizontal="100dp"
+        android:padding="10dp"
+        android:textColor="@color/blue"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:text="HOME CARE"
+        android:layout_marginHorizontal="100dp"
+        android:padding="10dp"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PERSONAL CARE"
+        android:textColor="@color/blue"
+        android:layout_marginHorizontal="100dp"
+        android:padding="10dp"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/purifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:text="WATER PURIFIER"
+        android:layout_marginHorizontal="100dp"
+        android:padding="10dp"
+        android:textAppearance="?android:textAppearanceMedium" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SUBMIT"
+    android:layout_marginTop="20dp"
+    android:layout_marginHorizontal="150dp"
+    android:background="@color/blue"
+    android:layout_marginBottom="0dp"
+    android:textColor="@color/white"
+    android:padding="15dp"
+    android:id="@+id/submit"
+    android:textStyle="bold"/>
+</LinearLayout>

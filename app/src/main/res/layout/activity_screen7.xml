@@ -1,32 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
     tools:context=".Screen7">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account Settings"
-        android:id="@+id/ac_settings"
-    />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Retailer"
-        android:id="@+id/add"
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp">
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:background="#0D4F8B"
+                android:textColor="@color/white"
+                android:layout_marginTop="170dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Account Settings" />
+
+            <Button
+                android:layout_marginTop="40dp"
+                android:id="@+id/track"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#0D4F8B"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+
+                android:text="Track Order" />
+
+            <Button
+                android:id="@+id/policy"
+                android:layout_marginTop="40dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#0D4F8B"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="E.Waste Management Policy" />
+    <ImageView
+        android:id = "@+id/pure_it"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="0dp"
+
+        android:src="@drawable/truck"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Track Order"
-        android:id="@+id/order"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E-waste Management Policy"
-        android:id="@+id/policy"
-        />
-</RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+

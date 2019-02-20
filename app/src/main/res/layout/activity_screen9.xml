@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     tools:context=".Screen9">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
     <TextView
+        android:id="@+id/e_waste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add retailer screen"/>
-</RelativeLayout>
+        android:text="E. WASTE MANAGEMENT POLICY"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:textAppearance="?android:textAppearanceLarge">
+    </TextView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/policy"/>
+
+    <TextView
+        android:id="@+id/policy_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:text="@string/policy_text1"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"></TextView>
+
+
+</LinearLayout>
+</ScrollView>

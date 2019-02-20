@@ -12,5 +12,6 @@ tools:context=".Screen7">
     android:id="@+id/settings"/>
 
 
+
 </RelativeLayout>
 

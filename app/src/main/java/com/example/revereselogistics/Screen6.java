@@ -15,7 +15,7 @@ public class Screen6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen6);
 
-        Button Return = (Button) findViewById(R.id.Return);
+        Button Return = (Button) findViewById(R.id.request_return);
 
         Return.setOnClickListener(new View.OnClickListener() {
             @Override

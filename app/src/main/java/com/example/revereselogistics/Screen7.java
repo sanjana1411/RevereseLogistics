@@ -14,8 +14,8 @@ public class Screen7 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen7);
 
-        Button settings = (Button) findViewById(R.id.ac_settings);
-        Button track = (Button) findViewById(R.id.order);
+        Button settings = (Button) findViewById(R.id.settings);
+        Button track = (Button) findViewById(R.id.track);
         Button policy = (Button) findViewById(R.id.policy);
 
 

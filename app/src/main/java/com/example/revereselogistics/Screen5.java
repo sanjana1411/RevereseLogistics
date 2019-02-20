@@ -13,13 +13,22 @@ public class Screen5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_5);
         Button wholesale_login = (Button) findViewById(R.id.wholesale_login);
-
+        Button wholesale_signup = (Button) findViewById(R.id.signup);
 
         wholesale_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent screen5;
                 screen5 = new Intent(Screen5.this, Screen6.class);
+                startActivity(screen5);
+            }
+        });
+
+        wholesale_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent screen5;
+                screen5 = new Intent(Screen5.this, Signup.class);
                 startActivity(screen5);
             }
         });

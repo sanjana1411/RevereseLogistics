@@ -39,6 +39,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/empty_circle"
+        android:visibility="visible"
         android:layout_marginLeft="12dp"
         android:id="@+id/state1"/>
 

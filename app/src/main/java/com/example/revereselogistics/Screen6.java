@@ -15,15 +15,22 @@ public class Screen6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen6);
 
-        Button Return = (Button) findViewById(R.id.request_return);
+        Button return_butt =(Button) findViewById(R.id.request_return);
 
-        Return.setOnClickListener(new View.OnClickListener() {
+        return_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen2 = new Intent(Screen6.this, Screen11.class);
-                startActivity(screen2);
+                Intent screen6;
+                screen6 = new Intent(Screen6.this, Screen11.class);
+                startActivity(screen6);
             }
         });
     }
-
 }
+
+
+
+
+
+
+

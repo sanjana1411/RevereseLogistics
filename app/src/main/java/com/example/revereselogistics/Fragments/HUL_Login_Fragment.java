@@ -56,39 +56,44 @@ public static final String TAG = "pikachu";
                 final String etEmpId = etHUL_EmpId.getText().toString();
                 final String etPassword = etHUL_password.getText().toString();
 
-                Log.d(TAG, "onClick: inside HUL Fragment");
-                final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
-                        .getReference().child("HUL");
+                if(!etEmpId.equals("") && !etPassword.equals("")) {
+                    Log.d(TAG, "onClick: inside HUL Fragment");
+                    final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
+                            .getReference().child("HUL");
 
 
-                databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        Log.d(TAG, "onDataChange: ");
-                        boolean isValid = false;
-                        for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()) {
-                            String reqID = dataSnapshot1.getKey();
-                            if(reqID.equals(etEmpId) &&
-                                    dataSnapshot1.child("Password").getValue().equals(etPassword)) {
-                                isValid = true;
-                                Toast.makeText(getActivity(), "Succesfully Logged In!",
+                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            Log.d(TAG, "onDataChange: ");
+                            boolean isValid = false;
+                            for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                                String reqID = dataSnapshot1.getKey();
+                                if (reqID.equals(etEmpId) &&
+                                        dataSnapshot1.child("Password").getValue().equals(etPassword)) {
+                                    isValid = true;
+                                    Toast.makeText(getActivity(), "Succesfully Logged In!",
+                                            Toast.LENGTH_SHORT).show();
+                                    break;
+                                }
+                            }
+                            if (!isValid) {
+                                Toast.makeText(getActivity(), "Enter valid Credentials!!!",
                                         Toast.LENGTH_SHORT).show();
-                                break;
+                                etHUL_EmpId.setText("");
+                                etHUL_password.setText("");
                             }
                         }
-                        if(!isValid) {
-                            Toast.makeText(getActivity(), "Enter valid Credentials!!!",
-                                    Toast.LENGTH_SHORT).show();
-                            etHUL_EmpId.setText("");
-                            etHUL_password.setText("");
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
                         }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                    });
+                } else {
+                    Toast.makeText(getActivity(), "Enter credentials first",
+                            Toast.LENGTH_SHORT).show();
+                }
 
                 //Toast.makeText(getActivity(), "Toast", Toast.LENGTH_SHORT).show();
                 //Log.d(TAG, "onClick: " + databaseReference.child("HUL").child(etEmpId));

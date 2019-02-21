@@ -54,40 +54,45 @@ public class Wholesaler_Login_Fragment extends Fragment {
                 final String whUserId = etWhId.getText().toString();
                 final String whPassword = etWhPassword.getText().toString();
 
-                final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
-                        .getReference().child("Wholesaler");
+                if(!whUserId.equals("") && !whPassword.equals("")) {
+                    final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
+                            .getReference().child("Wholesaler");
 
-                databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        boolean isValid = false;
-                        for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()) {
-                            String available_uid = dataSnapshot1.getKey();
-                            if(available_uid.equals(whUserId) &&
-                            dataSnapshot1.child("Password").getValue().equals(whPassword)) {
-                                isValid = true;
+                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            boolean isValid = false;
+                            for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                                String available_uid = dataSnapshot1.getKey();
+                                if (available_uid.equals(whUserId) &&
+                                        dataSnapshot1.child("Password").getValue().equals(whPassword)) {
+                                    isValid = true;
+                                    Toast.makeText(getActivity(),
+                                            "Successfully Logged In!",
+                                            Toast.LENGTH_SHORT).show();
+                                    break;
+                                }
+                            }
+                            if (!isValid) {
                                 Toast.makeText(getActivity(),
-                                        "Successfully Logged In!",
+                                        "Enter valid credentias!",
                                         Toast.LENGTH_SHORT).show();
-                                break;
+                                etWhId.setText("");
+                                etWhPassword.setText("");
                             }
                         }
-                        if(!isValid) {
-                            Toast.makeText(getActivity(),
-                                    "Enter valid credentias!",
-                                    Toast.LENGTH_SHORT).show();
-                            etWhId.setText("");
-                            etWhPassword.setText("");
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
                         }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                    });
+                } else {
+                    Toast.makeText(getActivity(), "Enter credentials first!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
 
         btWhSignUp.setOnClickListener(new View.OnClickListener() {
             @Override

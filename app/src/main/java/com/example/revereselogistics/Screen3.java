@@ -3,70 +3,41 @@ package com.example.revereselogistics;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-import java.util.Objects;
-
-public class Screen3 extends AppCompatActivity {
+public class Screen3 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen3);
         //initToolBar();
-        Button graphview = (Button) findViewById(R.id.GView);
 
+        String[] reason = {"Expired","Damaged","Defective","Surplus"};
+        String[] region = {"Delhi","Mumbai","Chennai","Kolkata"};
 
-        graphview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent screen3;
-                screen3 = new Intent(Screen3.this, Screen4.class);
-                startActivity(screen3);
-            }
-        });
+        Spinner spin = (Spinner) findViewById(R.id.reason_spin);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.reason,
+                R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adapter);
+        spin.setOnItemSelectedListener(this);
 
-     //   Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
-
-//    public void initToolBar() {
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-//        // toolbar.setTitle(HOME);
-//
-//        setActionBar(toolbar);
-//
-//       // toolbar.setNavigationIcon(R.drawable.dot);
-//        toolbar.setNavigationOnClickListener(
-//                new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Toast.makeText(Screen3.this, "clicking the toolbar!", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//        );
-//    }
-
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_screen3, menu);
-        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        switch (id) {
-            case R.id.action_settings:
-                Intent settingsIntent = new Intent(this, Screen4.class);
-                startActivity(settingsIntent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

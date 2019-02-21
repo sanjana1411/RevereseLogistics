@@ -6,74 +6,78 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_new"
     tools:context="com.example.revereselogistics.HomeCare_prod">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
             android:text="@string/home_care"
-            android:textStyle="bold"
-            android:textSize="24sp"
             android:textColor="@color/colorAccent"
-            />
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="30dp"
-            android:paddingTop="20dp">
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp">
+
             <ImageView
-                android:id = "@+id/cif"
+                android:id="@+id/cif"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="100dp"
-                android:src="@drawable/cif"
-                />
+                android:layout_weight="1"
+                android:src="@drawable/cif" />
+
             <ImageView
                 android:id="@+id/comfort"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="100dp"
+                android:layout_weight="1"
 
-                android:src="@drawable/comfort_logo"
-                />
+                android:src="@drawable/comfort_logo" />
+
             <ImageView
                 android:id="@+id/wheel"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/wheel_logo"
-                />
+                android:src="@drawable/wheel_logo" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="30dp"
-            android:paddingTop="20dp">
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp">
+
             <ImageView
                 android:id="@+id/domex"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/dome_logo"
-                />
+                android:src="@drawable/dome_logo" />
+
             <ImageView
                 android:id="@+id/rin"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/rin_logo"
-                />
+                android:src="@drawable/rin_logo" />
+
             <ImageView
                 android:id="@+id/rin"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:src="@drawable/surf"
-                />
-              </LinearLayout>
+                android:src="@drawable/surf" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,20 +97,18 @@
                 android:src="@drawable/vim" />
 
 
-
-
         </LinearLayout>
 
         <Button
             android:id="@+id/confirm_homecare"
             android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
-            android:text="CONFIRM"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/gray"
-            android:textSize="18sp"
+            android:padding="20dp"
+            android:text="CONFIRM"
             android:textFontWeight="20sp"
-            android:padding="20dp"/>
+            android:textSize="18sp" />
 
 
     </LinearLayout>

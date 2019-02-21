@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.revereselogistics.R;
+import com.example.revereselogistics.Screen6;
 import com.example.revereselogistics.Signup;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -70,6 +71,9 @@ public class Wholesaler_Login_Fragment extends Fragment {
                                     Toast.makeText(getActivity(),
                                             "Successfully Logged In!",
                                             Toast.LENGTH_SHORT).show();
+                                    Intent i = new Intent(getActivity(), Screen6.class);
+                                    i.putExtra("whUsername", whUserId);
+                                    startActivity(i);
                                     break;
                                 }
                             }

@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.revereselogistics.Fragments.HUL_Login_Fragment;
+import com.example.revereselogistics.Fragments.Wholesaler_Login_Fragment;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Screen1 extends AppCompatActivity {
@@ -17,25 +19,25 @@ public class Screen1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen1);
 
-        Button HUL = (Button) findViewById(R.id.HUL_id);
-        Button Wholesale = (Button) findViewById(R.id.Wholesale_id);
+        Button btHUL = (Button) findViewById(R.id.HUL_id);
+        Button btWholesale = (Button) findViewById(R.id.Wholesale_id);
 
 
 
-
-        HUL.setOnClickListener(new View.OnClickListener() {
+        btHUL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen2 = new Intent(Screen1.this, Screen2.class);
-                startActivity(screen2);
+                getSupportFragmentManager().beginTransaction().replace(R.id.screen1FragContainer,
+                        new HUL_Login_Fragment()).commit();
             }
         });
-        Wholesale.setOnClickListener(new View.OnClickListener() {
+
+        btWholesale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen5 = new Intent(Screen1.this, Screen5.class);
-                startActivity(screen5);
-
+                Log.d("pikachu", "onClick: Wholesale");
+                getSupportFragmentManager().beginTransaction().replace(R.id.screen1FragContainer,
+                        new Wholesaler_Login_Fragment()).commit();
             }
         });
     }

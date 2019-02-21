@@ -10,40 +10,44 @@
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
-        android:id="@+id/uid"
-        android:layout_height="wrap_content"
+        android:id="@+id/et_whuid"
         android:layout_width="wrap_content"
-        android:inputType="text"
-        android:hint = "UserName"
-        android:padding="20dp"
-        android:textSize="24dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:textColorHint="@color/white"
-        android:textStyle="bold" />
-    <EditText
-        android:id="@+id/password"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textSize="24dp"
+        android:hint="UserName"
         android:inputType="text"
-        android:hint="Password"
         android:padding="20dp"
         android:textColorHint="@color/white"
-        android:textStyle="bold"/>
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_whpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
     <Button
+        android:id="@+id/bt_wholesale_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:id="@+id/wholesale_login"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/forgot_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
+        android:text="Forgot Password, Click here"
         android:textColor="@color/white"
         android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:text="Forgot Password, Click here" />
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/new_user"
         android:layout_height="wrap_content"
@@ -53,12 +57,13 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:text="Don't have an account? Click here." />
+
     <Button
+        android:id="@+id/bt_whsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
-        android:id="@+id/signup"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 
 </LinearLayout>

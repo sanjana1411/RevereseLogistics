@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.revereselogistics.R;
@@ -30,25 +31,28 @@ public class Wholesaler_Login_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View fragmentView = inflater.inflate(R.layout.fragment_wholesaler__login_, container, false);
+        final View fragmentView = inflater.inflate(R.layout.fragment_wholesaler__login_, container, false);
         Log.d("pikachu", "onCreateView: Inflated");
-        Button btInfo = fragmentView.findViewById(R.id.info);
-        TextView tvWhName = fragmentView.findViewById(R.id.wh_name);
-        TextView tvWhNumber = fragmentView.findViewById(R.id.wh_name);
-        TextView tvWhMail = fragmentView.findViewById(R.id.wh_mail);
-        TextView tvAdd1 = fragmentView.findViewById(R.id.add1);
-        TextView tvAdd2 = fragmentView.findViewById(R.id.add2);
-        TextView tvAdd3 = fragmentView.findViewById(R.id.add3);
-        TextView tvReturn1 = fragmentView.findViewById(R.id.return_1);
-        TextView tvDate1  = fragmentView.findViewById(R.id.date_1);
-        TextView tvTime1 = fragmentView.findViewById(R.id.time_1);
-        TextView tvReturn2 = fragmentView.findViewById(R.id.return_2);
-        TextView tvDate2  = fragmentView.findViewById(R.id.date_2);
-        TextView tvTime2 = fragmentView.findViewById(R.id.time_2);
-        TextView tvReturn3 = fragmentView.findViewById(R.id.return_3);
-        TextView tvDate3  = fragmentView.findViewById(R.id.date_3);
-        TextView tvTime3 = fragmentView.findViewById(R.id.time_3);
-        Button btRequestReturn = fragmentView.findViewById(R.id.request_return);
+        final EditText etWhId = fragmentView.findViewById(R.id.et_whuid);
+        final EditText etWhPassword = fragmentView.findViewById(R.id.et_whpassword);
+        Button btWholesale_Login = fragmentView.findViewById(R.id.bt_wholesale_login);
+        Button btWhSignUp = fragmentView.findViewById(R.id.bt_whsignup);
+
+
+        btWholesale_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String whUserId = etWhId.getText().toString();
+                String whPassword = etWhPassword.getText().toString();
+            }
+        });
+
+        btWhSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
 
         return fragmentView;

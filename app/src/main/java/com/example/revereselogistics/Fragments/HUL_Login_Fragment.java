@@ -68,7 +68,8 @@ public static final String TAG = "pikachu";
                         boolean isValid = false;
                         for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()) {
                             String reqID = dataSnapshot1.getKey();
-                            if(reqID.equals(etEmpId) && dataSnapshot1.child("Password").getValue().equals(etPassword)) {
+                            if(reqID.equals(etEmpId) &&
+                                    dataSnapshot1.child("Password").getValue().equals(etPassword)) {
                                 isValid = true;
                                 Toast.makeText(getActivity(), "Succesfully Logged In!",
                                         Toast.LENGTH_SHORT).show();

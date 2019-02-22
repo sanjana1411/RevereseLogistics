@@ -1,23 +1,17 @@
 package com.example.revereselogistics;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.revereselogistics.Fragments.HUL_Login_Fragment;
 import com.example.revereselogistics.Fragments.Wholesaler_Login_Fragment;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class Screen1 extends AppCompatActivity {
+public class Opening_screen extends AppCompatActivity {
 
     public static final String TAG = "pikachu";
 
@@ -25,7 +19,7 @@ public class Screen1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen1);
+        setContentView(R.layout.Opening_screen);
 
         Button btHUL = (Button) findViewById(R.id.HUL_id);
         Button btWholesale = (Button) findViewById(R.id.Wholesale_id);
@@ -51,13 +45,13 @@ public class Screen1 extends AppCompatActivity {
                             Log.d(TAG, "onDataChange: " + reqID);
                             if(reqID == "HUL112" ) {
                                 isValid = true;
-                                Toast.makeText(Screen1.this, "Succesfully Logged In!",
+                                Toast.makeText(Opening_screen.this, "Succesfully Logged In!",
                                         Toast.LENGTH_SHORT).show();
                                 break;
                             }
                         }
                         if(!isValid) {
-                            Toast.makeText(Screen1.this, "Enter valid Credentials!!!",
+                            Toast.makeText(Opening_screen.this, "Enter valid Credentials!!!",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

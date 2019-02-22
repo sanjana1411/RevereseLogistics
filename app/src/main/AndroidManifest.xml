@@ -17,9 +17,7 @@
         <activity android:name=".Screen6" />
         <activity android:name=".Screen4" />
         <activity android:name=".Screen3" />
-        <activity android:name=".Screen5" />
-        <activity android:name=".Screen2" />
-        <activity android:name=".Screen1">
+        <activity android:name=".Opening_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

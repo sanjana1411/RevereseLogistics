@@ -226,8 +226,19 @@
             android:layout_height="1dp"
             android:background="@color/black"/>
         <Button
+            android:id="@+id/add_retail"
+            android:layout_width = "200dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Add a Retailer" />
+        <Button
         android:id="@+id/request_return"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_gravity="center"

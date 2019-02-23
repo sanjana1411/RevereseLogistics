@@ -14,11 +14,18 @@
     <item>Surplus</item>
     </string-array>
 
-    <string-array name="regions">
+    <string-array name="region">
         <item>Delhi</item>
         <item>Mumbai</item>
         <item>Kolkata</item>
         <item>Chennai</item>
+    </string-array>
+
+    <string-array name="regionCodes">
+        <item>R1</item>
+        <item>R2</item>
+        <item>R3</item>
+        <item>R4</item>
     </string-array>
     <string name="policy_text1">Hindustan Unilever Ltd (HUL) is committed to meeting the needs of customers and consumers in an environmentally sound manner, through continuous improvement in environmental performance in all our activities. Management at all levels, jointly with employees, is responsible and will be held accountable for company’s environmental performance.
     \nAccordingly, HUL’s aims are to:\n\n1. Ensure safety of its products and operations for the environment by using standards of environmental safety, which are scientifically sustainable and commonly acceptable.

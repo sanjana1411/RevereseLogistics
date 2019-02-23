@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
-    tools:context=".Screen9">
+    tools:context=".e_wasteMgtPolicy">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -29,11 +29,13 @@
         android:id="@+id/policy_text1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:padding="10dp"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:text="@string/policy_text1"
         android:textSize="20dp"
         android:fontFamily="sans-serif-light"
-        android:textStyle="bold"></TextView>
+        />
 
 
 </LinearLayout>

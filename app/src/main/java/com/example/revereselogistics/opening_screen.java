@@ -11,7 +11,7 @@ import com.example.revereselogistics.Fragments.Wholesaler_Login_Fragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Opening_screen extends AppCompatActivity {
+public class opening_screen extends AppCompatActivity {
 
     public static final String TAG = "pikachu";
 
@@ -19,7 +19,7 @@ public class Opening_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Opening_screen);
+        setContentView(R.layout.opening_screen);
 
         Button btHUL = (Button) findViewById(R.id.HUL_id);
         Button btWholesale = (Button) findViewById(R.id.Wholesale_id);
@@ -45,13 +45,13 @@ public class Opening_screen extends AppCompatActivity {
                             Log.d(TAG, "onDataChange: " + reqID);
                             if(reqID == "HUL112" ) {
                                 isValid = true;
-                                Toast.makeText(Opening_screen.this, "Succesfully Logged In!",
+                                Toast.makeText(opening_screen.this, "Succesfully Logged In!",
                                         Toast.LENGTH_SHORT).show();
                                 break;
                             }
                         }
                         if(!isValid) {
-                            Toast.makeText(Opening_screen.this, "Enter valid Credentials!!!",
+                            Toast.makeText(opening_screen.this, "Enter valid Credentials!!!",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

@@ -20,13 +20,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-
-public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSelectedListener*/ {
+public class Signup extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //private String region = "";
-    //private ArrayList<String> regionCodes = new ArrayList<>();
+    //private ArrayList<String> region= new ArrayList<>();
     public static final String TAG = "pikachu";
+   //String[] region = {"Delhi", "Mumbai", "Chennai", "Kolkata"};
+    private String regionCodeFinal = "";
+
 
 
     @Override
@@ -34,60 +35,28 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
-        final EditText e1, e2, e3, e4, e5, e6;
-        final Spinner s3;
+        final EditText e1, e2, e4, e5, e6;
+       // final Spinner s3;
         e1 = findViewById(R.id.name);
         e2 = findViewById(R.id.contact);
-        e3 = findViewById(R.id.region);
+       // e3 = findViewById(R.id.region_spin);
         e4 = findViewById(R.id.email);
         e5 = findViewById(R.id.pwd);
         e6 = findViewById(R.id.etuser_name);
 
-        /*final ArrayList<String> regionsList = new ArrayList<>();
-
-        Log.d(TAG, "onCreate: ArrayList created");*/
-
-
-        /*final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
+        final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
                 .getReference();
 
-        databaseReference.child("Region").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()) {
-                    regionsList.add((String)dataSnapshot1.getValue());
-                    regionCodes.add(dataSnapshot1.getKey());
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });*/
-
-        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(Signup.this,
-                android.R.layout.simple_spinner_item, regionsList);
-
+        Spinner spin = findViewById(R.id.region_spin);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.region,
+                R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s3.setAdapter(adapter);
-        s3.setSelection(0);
-        Log.d(TAG, "onCreate: Before listener");
-        s3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                s3.setSelection(i);
-                Log.d(TAG, "onItemSelected: selected yayee");
+        spin.setAdapter(adapter);
+        spin.setOnItemSelectedListener(this);
 
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        Log.d(TAG, "onCreate: After Listener");*/
 
 
         Button submit = findViewById(R.id.submit);
@@ -100,7 +69,7 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
                 
                 final String name = e1.getText().toString();
                 final String contact = e2.getText().toString();
-                final String region = e3.getText().toString();
+                //final String region = e3.getText().toString();
                 final String email = e4.getText().toString();
                 final String password = e5.getText().toString();
                 final String userName = e6.getText().toString();
@@ -117,7 +86,7 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
                         } else {
                             boolean empty = false;
 
-                            if((name.equals("")) || (contact.equals("")) || (region.equals("")) || (email.equals("")) || (password.equals(""))) {
+                            if((name.equals("")) || (contact.equals("")) || (regionCodeFinal.equals("")) || (email.equals("")) || (password.equals(""))) {
                                 Toast.makeText(Signup.this, "One or More fields are empty", Toast.LENGTH_SHORT).show();
                                 empty = true;
                             }
@@ -128,11 +97,11 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
                                 if(empty==false)
                                 {
                                     Wholesaler_Details wh_Details = new Wholesaler_Details(
-                                            email, name, password, contact, region);
+                                            email, name, password, contact, regionCodeFinal);
                                     databaseReference.child("Wholesaler").child(userName)
                                             .setValue(wh_Details);
 
-                                    Intent screen2 = new Intent(Signup.this, Screen6.class);
+                                    Intent screen2 = new Intent(Signup.this, acc_settings.class);
                                     startActivity(screen2);
                                 }
                         }
@@ -156,17 +125,31 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
 
     }
 
-    /*@Override
+    @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Log.d(TAG, "onItemSelected: Selecting Item"+adapterView.getItemAtPosition(i));
-        region = regionCodes.get(i);
-        Log.d(TAG, "onItemSelected: Item selected");
+        String[] regionCodesArray = getResources().getStringArray(R.array.regionCodes);
+        switch (i){
+            case 0:
+                 regionCodeFinal = regionCodesArray[i];
+                 break;
+            case 1:
+                regionCodeFinal = regionCodesArray[i];
+                break;
+            case 2:
+                regionCodeFinal = regionCodesArray[i];
+                break;
+            case 3:
+                regionCodeFinal = regionCodesArray[i];
+                break;
+
+        }
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-    }*/
+
+    }
 
 
 }

@@ -20,12 +20,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-
-public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSelectedListener*/ {
-
+public class Signup extends AppCompatActivity {
 
     public static final String TAG = "pikachu";
+   //String[] region = {"Delhi", "Mumbai", "Chennai", "Kolkata"};
+    private String regionCodeFinal = "";
+
 
 
     @Override
@@ -33,8 +33,9 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
+
         final EditText e1, e2, e3, e4, e5, e6, e7, e8, e9, e10;
-        final Spinner s3;
+
         e1 = findViewById(R.id.name);
         e2 = findViewById(R.id.contact);
         e3 = findViewById(R.id.region);
@@ -45,6 +46,7 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
         e8 = findViewById(R.id.city);
         e9 = findViewById(R.id.state);
         e10 = findViewById(R.id.pincode);
+
 
 
 
@@ -86,6 +88,7 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
                                     (password.equals("")) || userName.equals("") ||
                                     address1.equals("") || city.equals("") || state.equals("") ||
                                     pincode.equals("")) {
+
                                 Toast.makeText(Signup.this, "One or More fields are empty", Toast.LENGTH_SHORT).show();
                                 empty = true;
                             }
@@ -96,14 +99,16 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
                                 if(empty==false)
                                 {
                                     Wholesaler_Details wh_Details = new Wholesaler_Details(
+
                                             email, name, password, contact, region,
                                             address1, city, state, pincode);
                                     databaseReference.child("Wholesaler").child(userName)
                                             .setValue(wh_Details);
 
-                                    Intent i = new Intent(Signup.this, Screen6.class);
+                                    Intent i = new Intent(Signup.this, acc_settings.class);
                                     i.putExtra("whUsername", userName);
                                     startActivity(i);
+
                                 }
                         }
                     }
@@ -125,6 +130,7 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
 
 
     }
+
 
 
 

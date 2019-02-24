@@ -10,16 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Signup"></activity>
-        <activity android:name=".Screen10" />
-        <activity android:name=".Screen9" />
+        <activity android:name=".order_track" />
+        <activity android:name=".e_wasteMgtPolicy" />
         <activity android:name=".Screen8" />
         <activity android:name=".Screen7" />
-        <activity android:name=".Screen6" />
+        <activity android:name=".acc_settings" />
         <activity android:name=".Screen4" />
         <activity android:name=".Screen3" />
-        <activity android:name=".Screen5" />
-        <activity android:name=".Screen2" />
-        <activity android:name=".Screen1">
+        <activity android:name=".opening_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,8 +1,6 @@
 package com.example.revereselogistics.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -12,19 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.revereselogistics.R;
-import com.example.revereselogistics.Screen6;
+import com.example.revereselogistics.acc_settings;
 import com.example.revereselogistics.Signup;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import org.w3c.dom.Text;
 
 
 public class Wholesaler_Login_Fragment extends Fragment {
@@ -73,7 +68,7 @@ public class Wholesaler_Login_Fragment extends Fragment {
                                     Toast.makeText(getActivity(),
                                             "Successfully Logged In!",
                                             Toast.LENGTH_SHORT).show();
-                                    Intent i = new Intent(getActivity(), Screen6.class);
+                                    Intent i = new Intent(getActivity(), acc_settings.class);
                                     i.putExtra("whUsername", whUserId);
                                     startActivity(i);
                                     break;

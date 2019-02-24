@@ -29,7 +29,7 @@ public class Screen7 extends AppCompatActivity {
         track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen2 = new Intent(Screen7.this, Screen10.class);
+                Intent screen2 = new Intent(Screen7.this, order_track.class);
                 startActivity(screen2);
 
             }
@@ -37,7 +37,7 @@ public class Screen7 extends AppCompatActivity {
         policy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen2 = new Intent(Screen7.this, Screen9.class);
+                Intent screen2 = new Intent(Screen7.this, e_wasteMgtPolicy.class);
                 startActivity(screen2);
 
             }

@@ -21,6 +21,9 @@ tools:context=".Signup">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enter your details:"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textStyle="bold" />
 

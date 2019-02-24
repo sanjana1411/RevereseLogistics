@@ -16,13 +16,13 @@ package com.example.revereselogistics;
         import com.google.firebase.database.FirebaseDatabase;
         import com.google.firebase.database.ValueEventListener;
 
-public class Screen6 extends AppCompatActivity {
+public class acc_settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen6);
+        setContentView(R.layout.account_setting);
 
         Intent callerIntent = getIntent();
         final String whUsername = callerIntent.getStringExtra("whUsername");
@@ -57,9 +57,9 @@ public class Screen6 extends AppCompatActivity {
         return_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent screen6;
-                screen6 = new Intent(Screen6.this, Screen11.class);
-                startActivity(screen6);
+//                Intent screen6;
+//                screen6 = new Intent(acc_settings.this, Screen11.class);
+//  startActivity(screen6);
             }
         });
     }

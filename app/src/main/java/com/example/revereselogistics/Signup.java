@@ -52,54 +52,52 @@ public class Signup extends AppCompatActivity {
 
 
         Button submit = findViewById(R.id.submit);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                
+            submit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-                Log.d(TAG, "onClick: submit clicked");
-                
-                final String name = e1.getText().toString();
-                final String contact = e2.getText().toString();
-                final String region = e3.getText().toString();
-                final String email = e4.getText().toString();
-                final String password = e5.getText().toString();
-                final String userName = e6.getText().toString();
-                final String address1 = e7.getText().toString();
-                final String city = e8.getText().toString();
-                final String state = e9.getText().toString();
-                final String pincode = e10.getText().toString();
 
-                final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
-                        .getReference();
-                Log.d(TAG, "onClick: got the reference");
+                    Log.d(TAG, "onClick: submit clicked");
 
-                databaseReference.child("Wholesaler").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild(userName)) {
-                            e6.setText("");
-                            Toast.makeText(Signup.this, "UserName already exists!", Toast.LENGTH_SHORT).show();
-                        } else {
-                            boolean empty = false;
+                    final String name = e1.getText().toString();
+                    final String contact = e2.getText().toString();
+                    final String region = e3.getText().toString();
+                    final String email = e4.getText().toString();
+                    final String password = e5.getText().toString();
+                    final String userName = e6.getText().toString();
+                    final String address1 = e7.getText().toString();
+                    final String city = e8.getText().toString();
+                    final String state = e9.getText().toString();
+                    final String pincode = e10.getText().toString();
 
-                            if((name.equals("")) || (contact.equals("")) ||
-                                    (region.equals("")) || (email.equals("")) ||
-                                    (password.equals("")) || userName.equals("") ||
-                                    address1.equals("") || city.equals("") || state.equals("") ||
-                                    pincode.equals("")) {
+                    final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
+                            .getReference();
+                    Log.d(TAG, "onClick: got the reference");
 
-                                Toast.makeText(Signup.this, "One or More fields are empty", Toast.LENGTH_SHORT).show();
-                                empty = true;
-                            }
+                    databaseReference.child("Wholesaler").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.hasChild(userName)) {
+                                e6.setText("");
+                                Toast.makeText(Signup.this, "UserName already exists!", Toast.LENGTH_SHORT).show();
+                            } else {
+                                boolean empty = false;
+
+                                if ((name.equals("")) || (contact.equals("")) ||
+                                        (region.equals("")) || (email.equals("")) ||
+                                        (password.equals("")) || userName.equals("") ||
+                                        address1.equals("") || city.equals("") || state.equals("") ||
+                                        pincode.equals("")) {
+
+                                    Toast.makeText(Signup.this, "One or More fields are empty", Toast.LENGTH_SHORT).show();
+                                    empty = true;
+                                }
 
                                 //TODO : push the details to firebase clouds;
 
-                                Log.d(TAG, "onDataChange: "+empty);
-                                if(empty==false)
-                                {
+                                Log.d(TAG, "onDataChange: " + empty);
+                                if (empty == false) {
                                     Wholesaler_Details wh_Details = new Wholesaler_Details(
-
                                             email, name, password, contact, region,
                                             address1, city, state, pincode);
                                     databaseReference.child("Wholesaler").child(userName)
@@ -110,23 +108,18 @@ public class Signup extends AppCompatActivity {
                                     startActivity(i);
 
                                 }
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
-
+                        }
+                    });
 
 
-
-
-
-
-            }
-        });
+                }
+            });
 
 
     }

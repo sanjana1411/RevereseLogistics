@@ -1,7 +1,7 @@
 package com.example.revereselogistics.POJOs;
 
 public class Wholesaler_Details {
-    String Email_id, Name, Password, Ph_no, Region, Address1, City, State, Pincode;
+    public String Email_id, Name, Password, Ph_no, Region, Address1, City, State, Pincode;
     public Wholesaler_Details(String Email_id, String Name, String Password,
                               String Ph_no, String Region, String address1,
                               String city, String state, String pincode) {
@@ -15,5 +15,7 @@ public class Wholesaler_Details {
         this.State = state;
         this.Pincode = pincode;
     }
+
+
 
 }

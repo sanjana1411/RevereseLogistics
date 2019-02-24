@@ -23,6 +23,66 @@
           }
         },
         {
+          "client_id": "892883604225-c73o1680mlq1qtou21t8sn2d0u3kv737.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.revereselogistics",
+            "certificate_hash": "bee3f5ae137d0215294ced6871d534801e2d4ca2"
+          }
+        },
+        {
+          "client_id": "892883604225-96oqtpvhne8p2tisidg9cn0rqj7oe1a1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.revereselogistics",
+            "certificate_hash": "cf2e88d16818c4b69e57b5f52e9e97cc58558b86"
+          }
+        },
+        {
+          "client_id": "892883604225-5os7k71go8sdf4qpquprocb3ldjbf744.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwBQhM9HBKRM2OTVzYmEzTY9k9yJxDVXU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892883604225-5os7k71go8sdf4qpquprocb3ldjbf744.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892883604225:android:7a8bac0f53f7776f",
+        "android_client_info": {
+          "package_name": "com.example.zingospotx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892883604225-r6h31cicv7iucs7ohr85l8671pub4dbc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zingospotx",
+            "certificate_hash": "00164910aad0d7d4841db9c47df599f62e821b99"
+          }
+        },
+        {
           "client_id": "892883604225-5os7k71go8sdf4qpquprocb3ldjbf744.apps.googleusercontent.com",
           "client_type": 3
         }

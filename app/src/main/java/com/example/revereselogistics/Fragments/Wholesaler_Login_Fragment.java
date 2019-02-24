@@ -55,6 +55,8 @@ public class Wholesaler_Login_Fragment extends Fragment {
                 final String whUserId = etWhId.getText().toString();
                 final String whPassword = etWhPassword.getText().toString();
 
+                Log.d("pikachu", "onClick: Login wholesaler clicked");
+
                 if(!whUserId.equals("") && !whPassword.equals("")) {
                     final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
                             .getReference().child("Wholesaler");

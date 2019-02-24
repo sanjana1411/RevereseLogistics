@@ -31,6 +31,8 @@ public class Screen6 extends AppCompatActivity {
         final TextView tvWhContact = findViewById(R.id.wh_number);
         final TextView tvWhMail = findViewById(R.id.wh_mail);
 
+        Log.d("", "onCreate: Screen 6 started");
+
 
         final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
                 .getReference().child("Wholesaler").child(whUsername);

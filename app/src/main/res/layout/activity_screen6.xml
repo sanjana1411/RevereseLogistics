@@ -85,48 +85,52 @@
             android:background="@color/black"/>
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            tools:targetApi="28">
 
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            app:srcCompat="@drawable/logo"
-            android:padding="5dp"
-            />
-        <TextView
-            android:id="@+id/return_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="2dp"
-            android:textSize="18dp"
-            android:textColor="@color/blue"
-            android:text="Return number 1"
-            android:layout_marginRight="45dp"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/logo" />
+
             <TextView
-                android:layout_width="wrap_content"
-                android:id="@+id/date_1"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:textSize="16dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginBottom="3dp"
-                android:text = "Date of return"/>
-            <TextView
+                android:id="@+id/return_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/time_1"
-                android:layout_gravity="right"
-                android:textSize="16dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text = "Time of return"/>
+                android:layout_marginRight="45dp"
+                android:padding="2dp"
+                android:text="Return number 1"
+                android:textColor="@color/blue"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="3dp"
+                    android:text="Date of return"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/time_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Time of return"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="1dp"

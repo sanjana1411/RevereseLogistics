@@ -132,8 +132,9 @@ public class Signup extends AppCompatActivity /*implements AdapterView.OnItemSel
                                     databaseReference.child("Wholesaler").child(userName)
                                             .setValue(wh_Details);
 
-                                    Intent screen2 = new Intent(Signup.this, Screen6.class);
-                                    startActivity(screen2);
+                                    Intent i = new Intent(Signup.this, Screen6.class);
+                                    i.putExtra("whUsername", userName);
+                                    startActivity(i);
                                 }
                         }
                     }

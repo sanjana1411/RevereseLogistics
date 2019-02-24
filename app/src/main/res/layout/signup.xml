@@ -84,10 +84,11 @@ tools:context=".Signup">
                 android:id="@+id/submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="150dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:padding="25dp"
                 android:text="SUBMIT"
+                android:gravity="center"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

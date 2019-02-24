@@ -57,7 +57,7 @@ public static final String TAG = "pikachu";
                 final String etPassword = etHUL_password.getText().toString();
 
                 if(!etEmpId.equals("") && !etPassword.equals("")) {
-                    Log.d(TAG, "onClick: inside HUL Fragment");
+                    Log.d(TAG, "onClick: inside HUL Fragment yayeeee");
                     final DatabaseReference databaseReference = FirebaseDatabase.getInstance()
                             .getReference().child("HUL");
 
